@@ -30,15 +30,15 @@ Avec ce sujet, nous vous proposons de reconstruire une interface utilisateur qui
 
 ![Reconstruction de l'interface utilisateur FlightRadar24](img/app_preview.jpg)
 
-Ainsi, ce sujet vous permettra:
+L'objet de ce sujet est de reconstruire pas à pas l'interface utilisateur de FlightRadar24. Ce faisant, ce sujet vous apprendra trois choses:
 
--   De récupérer les données de FlightRadar24 avec interface de programmation Python;
--   De développer un site interactif avec [Dash](https://dash.plotly.com/), un framework Python réputé servant à construire des applications de visualisation de données;
--   De voir comment déployer facilement une application de visualisation dans un environnement Cloud.
+-   Récupérer les données de FlightRadar24 avec interface de programmation Python;
+-   Développer un site interactif avec [Dash](https://dash.plotly.com/), un framework Python réputé servant à construire des applications de visualisation de données;
+-   Déployer facilement une application de visualisation dans un environnement Cloud.
 
 # Déroulement du sujet
 
-Ce sujet comporte 5 parties:
+Ce sujet comporte 5 parties listées dans le bandeau en haut de la page:
 
 -   Dans la première partie, nous explorerons les données disponibles via une [interface de programmation](https://github.com/JeanExtreme002/FlightRadarAPI);
 -   Dans la deuxième partie, nous écrirons une première version de l'application de visualisation;
