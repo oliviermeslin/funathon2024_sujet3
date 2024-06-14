@@ -81,3 +81,12 @@ pip install -r requirements.txt
 ```
 
 Pour ouvrir un terminal, il suffit de cliquer sur le menu VScode en haut à gauche (les trois petites barres horizontales), puis `Terminal > New Terminal`. 
+
+::: {.callout-note appearance="simple"}
+
+## Attention
+
+Pour toutes les opérations menées depuis le terminal,  il est important que vous vous placiez à la racine du dépôt Git. Vous pouvez vérifier dans quel dossier vous êtes placés en regardant l'invite de commande du terminal: celle-ci doit se terminer par `funathon2024_sujet3`. Si ce n'est pas le cas, modifier votre emplacement avec `cd`.
+
+
+:::
