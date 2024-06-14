@@ -7,7 +7,12 @@ format:
     number-sections: true
 ---
 
-Cette [librairie](https://github.com/JeanExtreme002/FlightRadarAPI) Python propose une API permettant d'accéder aux données gratuites de FlightRadar24. Une documentation est accessible [ici](https://jeanextreme002.github.io/FlightRadarAPI/python/). Pour utiliser l'API, l'idée est d'initialiser un client et de faire appel à plusieurs méthodes pour récupérer différents types de données. Passons à l'exercice.
+Cette [librairie](https://github.com/JeanExtreme002/FlightRadarAPI) Python propose une API permettant d'accéder aux données gratuites de FlightRadar24. Une documentation est accessible [ici](https://jeanextreme002.github.io/FlightRadarAPI/python/).Comme toute API, cette API s'utilise en deux temps:
+
+- on commence par initialiser un client pour pouvoir interroger le serveur;
+- on fait ensuite appel à plusieurs méthodes pour récupérer différents types de données. 
+
+Passons à l'exercice.
 
 ::: {.callout-note appearance="simple"}
 
