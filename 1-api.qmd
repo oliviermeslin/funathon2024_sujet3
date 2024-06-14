@@ -104,7 +104,7 @@ flights = fr_api.get_flights()
 print(f"Informations récupérées sur {len(flights)} vols.")
 ```
 
-7. Pour analyser les détails d'un vol, il faut utiliser les méthodes `FlightRadar24API.get_flight_details` pour collecter les détails et `Flight.set_flight_details` pour les attribuer au vol (par défaut seulement quelques informations sont collectées). Explorer les informations disponibles sur un vol (objet de la classe `Flight`). Par exemple on pourra regarder les attributs suivants:
+7. Pour analyser les détails d'un vol, il faut utiliser les méthodes `FlightRadar24API.get_flight_details` pour collecter les détails d'un vol précis via l'API, puis `Flight.set_flight_details` pour les attribuer à ce vol (car seulement quelques informations sont collectées par défaut). Explorer les informations disponibles sur un vol (objet de la classe `Flight`), par exemple en listant les attribus avec la commande `dir(my_flight)`. On pourra notamment regarder les attributs suivants:
 
 - `latitude`: Latitude de l'aéronef;
 - `longitude`: Longitude de l'aéronef;
