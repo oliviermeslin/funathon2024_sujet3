@@ -17,7 +17,7 @@ Dans cette partie on propose deux améliorations à l'interface utilisateur qui 
 
 Le code pour cet exercice se trouve dans le répertoire `even_better_app`. Ce code correspond à l'application qui devrait être obtenue à la fin de l'exercice précédent. Pour afficher des informations supplémentaires sur chaque vol, il faut procéder en deux étapes.
 
-1. Dans le fichier `even_better_app/utils.py`, modifier la fonction `fetch_flight_data` pour inclure davantage d'information dans les dictionnaires de vols.
+1. Dans le fichier `even_better_app/utils.py`, modifier la fonction `fetch_flight_data` pour inclure les information dans les dictionnaires de vols: code IATA des aéroports de départ et d'arrivée, vitesse au sol et type d'avion. __Attention: il ne faut pas utiliser la fonction `get_flight_details()` car vous atteindriez immédiatement la limite de consultation de l'API Flightradar24.__
 
 ```{python}
 #| code-fold: true
