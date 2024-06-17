@@ -68,11 +68,7 @@ def update_graph_live(n, previous_data):
         dl.Marker(
             id=flight['id'],
             position=[flight['latitude'], flight['longitude']],
-            children=[
-                dl.Popup(html.Div([
-                    html.H3(flight['id'])
-                ]))
-            ],
+            children=[dl.Popup(content=f"Id: {flight['id']}")],
             icon=get_custom_icon(
                 get_closest_round_angle(flight['rotation_angle'])
             ),
