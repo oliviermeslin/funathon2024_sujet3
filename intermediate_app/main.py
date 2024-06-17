@@ -53,13 +53,12 @@ def update_graph_live(n):
     children = default_map_children + [
         dl.Marker(
             id=flight['id'],
-            position=[flight["latitude"], flight["longitude"]],
-            clickData=flight['id']
+            position=[flight["latitude"], flight["longitude"]], 
+            children=[dl.Popup(content=f"Id: {flight['id']}")]
         ) for flight in data
     ]
 
-    return [children]
-
+    return children
 
 if __name__ == '__main__':
     app.run_server(
