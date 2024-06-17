@@ -54,54 +54,7 @@ Cet exercice est à réaliser dans le répertoire `better_app`, qui contient enc
 
 <details>
 <summary>Cliquer pour voir un indice</summary>
-Pour calculer un cap à partir de positions différentes à $t$ et $t-1$ en degrés, on pourra suivre les étapes suivantes:
-
-- Conversion des coordonnées en radians:
-$$
-\text{lat}_1 \rightarrow \phi_1 = \text{lat}_1 \times \frac{\pi}{180}
-$$
-
-$$
-\text{lon}_1 \rightarrow \lambda_1 = \text{lon}_1 \times \frac{\pi}{180}
-$$
-
-$$
-\text{lat}_2 \rightarrow \phi_2 = \text{lat}_2 \times \frac{\pi}{180}
-$$
-
-$$
-\text{lon}_2 \rightarrow \lambda_2 = \text{lon}_2 \times \frac{\pi}{180}
-$$
-
-- Calcul du cap: utiliser les formules suivantes pour calculer le cap \theta (en radians):
-
-$$
-\Delta\lambda = \lambda_2 - \lambda_1
-$$
-
-$$
-y = \sin(\Delta\lambda) \cdot \cos(\phi_2)
-$$
-
-$$
-x = \cos(\phi_1) \cdot \sin(\phi_2) - \sin(\phi_1) \cdot \cos(\phi_2) \cdot \cos(\Delta\lambda)
-$$
-
-$$
-\theta = \text{atan2}(y, x)
-$$
-
-- Conversion du cap en degrés:
-
-$$
-\theta_{\text{degrés}} = \theta \times \frac{180}{\pi}
-$$
-
-- Normalisation de l'angle pour qu'il soit compris entre 0 et 360 degrés:
-
-$$
-\theta_{\text{degrés}} = (\theta_{\text{degrés}} + 360) \mod 360
-$$
+Pour calculer un cap à partir de positions différentes à $t$ et $t-1$ en degrés, vous pouvez suivre la méthode décrite sur [cette page](https://www.movable-type.co.uk/scripts/latlong.html), paragraphe _Bearing_.
 </details>
 
 ```{python}
