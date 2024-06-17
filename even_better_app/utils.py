@@ -36,12 +36,17 @@ def fetch_flight_data(
         airline=airline_icao,
         bounds=bounds
     )
+
     # TO MODIFY
     return [
         {
+            "id": flight.id,
+            "aircraft_code": flight.aircraft_code,
+            "destination_airport_iata":  flight.destination_airport_iata,
+            "origin_airport_iata":  flight.origin_airport_iata,
             "latitude": flight.latitude,
             "longitude": flight.longitude,
-            "id": flight.id,
+            "ground_speed":  flight.ground_speed
         } for flight in flights
     ]
 
