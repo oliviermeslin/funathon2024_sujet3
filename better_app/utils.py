@@ -3,7 +3,8 @@ Utils.
 """
 from typing import Dict, Optional, List
 from FlightRadar24 import FlightRadar24API
-
+import math
+import numpy as np
 
 def fetch_flight_data(
     client: FlightRadar24API,
@@ -97,7 +98,22 @@ def bearing_from_positions(
     Returns:
         float: Bearing in degrees.
     """
-    raise NotImplementedError("TO MODIFY")
+
+    # Convert coordinates to radians
+    lat1  = previous_latitude  * math.pi / 180
+    long1 = previous_longitude * math.pi / 180
+    lat2  = latitude * math.pi / 180
+    long2 = longitude * math.pi / 180
+
+    # Computing angle
+    y = math.sin(long2 - long1) * math.cos(lat2)
+    x = math.cos(lat1) * math.sin(lat2) - math.sin(lat1) * math.cos(lat2) * math.cos(long2 - long1)
+    angle = math.atan2(y, x)
+
+    # Getting a positive angle
+    angle = (math.degrees(angle) + 360) % 360
+
+    return(angle)
 
 
 def get_closest_round_angle(angle: float) -> int:
@@ -114,7 +130,23 @@ def get_closest_round_angle(angle: float) -> int:
             165, 180, 195, 210, 225, 240, 255, 270,
             285, 300, 315, 330, 345.
     """
-    raise NotImplementedError("TO MODIFY")
+    
+    round_angles = [
+        0, 15, 30, 45, 60, 75, 90,
+        105, 120, 135, 150, 165, 180,
+        195, 210, 225, 240, 255, 270,
+        285, 300, 315, 330, 345, 360,
+    ]
+    differences = np.array([
+        angle - round_angle for round_angle in round_angles
+    ])
+    abs_differences = np.abs(differences)
+    closest_angle_idx = abs_differences.argmin()
+    closest_angle = round_angles[closest_angle_idx]
+    if closest_angle == 360:
+        return 0
+    else:
+        return closest_angle
 
 
 def get_custom_icon(round_angle: int) -> Dict:
