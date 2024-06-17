@@ -38,7 +38,7 @@ website:
         href: 3-advanced.qmd
       - text: "4 Améliorer encore l'UI"
         href: 4-final.qmd
-      - text: "5 Déplyer l'UI"
+      - text: "5 Déployer l'UI"
         href: 5-deployment.qmd
       - text: "Application démo"
         href: "https://flightradar-ui-demo.lab.sspcloud.fr"
