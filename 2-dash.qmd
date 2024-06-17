@@ -52,7 +52,7 @@ if __name__ == '__main__':
     app.run(debug=True, port=5000, host='0.0.0.0')
 ```
 
-Regarder les différents composants de l'application et identifier les éléments du code correspondants.
+Regardez les différents composants de l'application et identifiez les éléments du code correspondants, en lisant attentivement cette [page de la documentation de `Dash`](https://dash.plotly.com/basic-callbacks). En particulier, essayez de comprendre comment la fonction `update_graph()` est appelée.
 
 <details>
     <summary>Cliquer pour voir la réponse</summary>
