@@ -17,7 +17,7 @@ Le script suivant permet de faire tourner une application Dash minimale à parti
 python minimal_app/main.py
 ``` 
 
-L'application doit être disponible à une URL indiquée sur l'interface utilisateur du SSP Cloud, une fois cliqué sur le bouton `Ouvrir` du service Visual Studio Code. Pour rappel il faut ouvrir le service en changeant la configuration (ouverture du port 5000).
+L'application est disponible à une URL indiquée sur l'interface utilisateur du SSP Cloud. Voici comment accéder au lien: depuis la page `Mes Services`, cliquer sur le bouton `Ouvrir` du service VSCode, puis sur le lien indiqué dans le texte (voir la capture d'écran ci-dessous). Pour rappel, il faut que vous ayez lancé le service VSCode en changeant la configuration (ouverture du port custom 5000 dans l'onglet `Networking`).
 
 ![Emplacement du lien pour accéder à l'application Dash](img/custom_port.jpg)
 
