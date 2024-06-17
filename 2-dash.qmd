@@ -133,7 +133,7 @@ def fetch_flight_data(
 
 3. On souhaite maintenant modifier la fonction `update_graph_live` pour que sa sortie modifie la carte affichée de manière adaptée. Pour le moment, à chaque fois que la fonction est appelée, elle renvoie une liste contenant un fond de carte et un marqueur par vol récupéré grâce à la fonction `fetch_flight_data`, placé aux latitude et longitude 0.
 
-Mettre à jour la liste renvoyée par la fonction `update_graph_live` pour que les marqueurs soient placés là où se situent les avions des vols, et pour que l'identifiant d'un vol s'affiche lorsqu'on clique sur le marqueur associé. 
+    Mettre à jour la liste renvoyée par la fonction `update_graph_live` pour que les marqueurs soient placés là où se situent les avions des vols, et pour que l'identifiant d'un vol s'affiche lorsqu'on clique sur le marqueur associé. 
 
 ```{python}
 #| code-fold: true
