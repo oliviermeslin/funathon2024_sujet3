@@ -28,10 +28,10 @@ def fetch_flight_data(
     zone = client.get_zones()[zone_str]
     bounds = client.get_bounds(zone)
 
-    flights = fr_api.get_flights(
-        aircraft_type = aircraft_type,
-        airline = airline_icao,
-        bounds = bounds
+    flights = client.get_flights(
+        aircraft_type=aircraft_type,
+        airline=airline_icao,
+        bounds=bounds
     )
 
     list_flights = [{"latitude": flight.latitude, "longitude": flight.longitude, "id": flight.id} for flight in flights]
