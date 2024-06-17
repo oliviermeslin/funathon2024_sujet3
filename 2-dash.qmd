@@ -116,9 +116,9 @@ def fetch_flight_data(
 
 2. On trouve dans le fichier `main.py` le code de l'application Dash. La mise en page de l'application est simple. Elle contient d'abord un composant [`dash_leaflet.MapContainer`](https://www.dash-leaflet.com/components/map_container) abrévié en `dash_leaflet.Map`, avec un argument `children` initialisé avec la liste `[dash_leaflet.TileLayer()]` qui intègre un fond de carte OpenStreetMap au `dash_leaflet.MapContainer`.
 
-Le second composant est un [`dcc.Interval`](https://dash.plotly.com/dash-core-components/interval) qui va permettre d'initier un callback périodiquement. Ce composant contient un attribut `n_intervals` (initialisé à 0 ici) qui est incrémenté à interval de temps régulier, toutes les `interval` millisecondes.
+    Le second composant est un [`dcc.Interval`](https://dash.plotly.com/dash-core-components/interval) qui va permettre d'initier un callback périodiquement. Ce composant contient un attribut `n_intervals` (initialisé à 0 ici) qui est incrémenté à interval de temps régulier, toutes les `interval` millisecondes.
 
-De fait, il faut définir la fonction `update_graph_live` comme un callback. Ecrire un décorateur pour que la fonction soit exécutée à chaque fois que l'attribut `n_intervals` du composant `dcc.Interval` est incrémenté, et de sorte à ce que la sortie de la fonction modifie l'attribut `children` du composant `dash_leaflet.MapContainer`.
+    De fait, il faut définir la fonction `update_graph_live` comme un callback. Ecrire un décorateur pour que la fonction soit exécutée à chaque fois que l'attribut `n_intervals` du composant `dcc.Interval` est incrémenté, et de sorte à ce que la sortie de la fonction modifie l'attribut `children` du composant `dash_leaflet.MapContainer`.
 
 ```{python}
 #| code-fold: true
