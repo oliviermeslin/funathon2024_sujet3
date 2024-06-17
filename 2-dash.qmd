@@ -126,8 +126,8 @@ def fetch_flight_data(
 #| code-overflow: scroll
 #| eval: false
 @app.callback(
-    [Output('map', 'children')],
-    [Input('interval-component', 'n_intervals')],
+    Output('map', 'children'),
+    Input('interval-component', 'n_intervals'),
 )
 ```
 
