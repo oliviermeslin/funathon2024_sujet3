@@ -67,7 +67,7 @@ def fetch_flight_data(
     ]
 ```
 
-2. Pour afficher plus d'informations dans l'application, il faut modifier le contenu de la fonction `update_graph_live` dans `even_better_app/main.py`, et plus spécifiquement l'argument `children` du constructeur `dl.Marker`. Implémenter ce changement.
+2. Pour afficher plus d'informations dans l'application, il faut modifier le contenu de la fonction `update_graph_live` dans `even_better_app/main.py`, et plus spécifiquement l'argument `children` du constructeur `dl.Marker`. Ajouter les codes des aéroports de départ et d'arrivée et la vitesse au sol.
 
 ```{python}
 #| code-fold: true
@@ -89,7 +89,7 @@ def update_graph_live(n, previous_data):
                     dcc.Markdown(f'''
                         **Identifiant du vol**: {flight['id']}.
 
-                        **Aérport d'origine**: {flight['origin_airport_iata']}.
+                        **Aéroport d'origine**: {flight['origin_airport_iata']}.
 
                         **Aéroport de destination**: {flight['destination_airport_iata']}.
 
