@@ -17,6 +17,26 @@ app = dash.Dash(__name__)
 # FlightRadar24API client
 fr_api = FlightRadar24API()
 
+# Compter les compagnies
+list_airlines = {
+    "AAL": "American Airlines",
+    "UAL": "United Airlines",
+    "DAL": "Delta Air Lines",
+    "RYR": "Ryanair",
+    "EZY": "easyJet",
+    "THY": "Turkish Airlines",
+    "ANA": "ANA",
+    "DLH": "Lufthansa",
+    "ACA": "Air Canada",
+    "AFL": "Aeroflot",
+    "AZU": "Azul",
+    "JBU": "JetBlue Airways",
+    "AFR": "Air France",
+    "QFA": "Qantas",
+    "AVA": "AVIANCA",
+    "KLM": "KLM",
+    "FFT": "Frontier Airlines"
+}
 
 default_map_children = [
     dl.TileLayer()
@@ -25,6 +45,7 @@ default_map_children = [
 
 app.layout = html.Div([
     # The memory store reverts to the default on every page refresh
+    dcc.Dropdown(options=list_airlines, value='AFR', id='airline-choice'),
     dcc.Store(id="memory"),
     # The local store will take the initial data
     # only the first time the page is loaded
@@ -52,14 +73,14 @@ app.layout = html.Div([
 # TO MODIFY
 @app.callback(
     [Output('map', 'children'), Output('memory', 'data')],
-    [Input('interval-component', 'n_intervals')],
+    [Input('interval-component', 'n_intervals'), Input('airline-choice', 'value')],
     [State('memory', 'data')]
 )
-def update_graph_live(n, previous_data):
+def update_graph_live(n, airline_icao, previous_data):
     # Retrieve a list of flight dictionaries with 'latitude', 'longitude', 'id'
     # and additional keys
     # TO MODIFY
-    data = fetch_flight_data(client=fr_api, airline_icao="AFR", zone_str="europe")
+    data = fetch_flight_data(client=fr_api, airline_icao=airline_icao, zone_str="europe")
     # Add a rotation_angle key to dictionaries
     if previous_data is None:
         for flight_data in data:
