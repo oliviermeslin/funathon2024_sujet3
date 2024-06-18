@@ -175,7 +175,7 @@ app.layout = html.Div([
 ])
 ```
 
-2. Toujours dans `final_app/main.py`, modifier le décorateur callback de la fonction `update_graph_live` pour ajouter un `Input` correspondant à la compagnie sélectionnée dans le menu déroulant. Modifier également l'appel de la fonction `fetch_flight_data` pour que les données de la bonne compagnie soient récupérées.
+2. Toujours dans `final_app/main.py`, modifier le décorateur callback de la fonction `update_graph_live` pour ajouter un `Input` correspondant à la compagnie sélectionnée dans le menu déroulant. Pour vous aider, vous pouvez relire [cette page](https://dash.plotly.com/basic-callbacks), notamment le point 1.c. Modifier également l'appel de la fonction `fetch_flight_data` pour que les données de la bonne compagnie soient récupérées.
 
 ```{python}
 #| code-fold: true
