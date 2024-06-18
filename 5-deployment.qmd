@@ -29,9 +29,11 @@ Dans cette partie on propose de déployer l'application sur le SSP Cloud et de l
     - Ouvrir un Terminal;
     - Se placer à la racine du projet;
     - Appliquer les contrats Kubernetes avec la commande `kubectl apply -f kubernetes/`;
-    - Vérifier le lancement du conteneur avec la commande `watch kubectl get pods`. Le nom associé devrait être de la forme `flightradar-ui-*`;
+    - Vérifier le lancement du conteneur avec la commande `watch kubectl get pods`. Le nom associé devrait être de la forme `flightradar-ui-*`; vous pouvez sortir de cet écran en faisant `Ctrl + C`;
     - Attendre que le conteneur obtienne le statut `Running`.
 
 3. Entrer dans un navigateur l'URL spécifiée dans le fichier `kubernetes/ingress.yaml`, et vérifier que l'application fonctionne correctement !
+
+4. Dernier point important: il ne faut pas oublier de supprimer l'application pour ne pas occuper inutilement les ressources du SSP Cloud. Pour fermer l'application, exécuter `kubectl delete -f kubernetes/`.
 
 :::
