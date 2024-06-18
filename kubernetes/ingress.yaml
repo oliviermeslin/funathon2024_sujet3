@@ -7,9 +7,9 @@ metadata:
 spec:
   tls:
     - hosts:
-      - <xxx>.lab.sspcloud.fr  # TO MODIFY
+      - flyingtom.lab.sspcloud.fr  # TO MODIFY
   rules:
-  - host: <xxx>.lab.sspcloud.fr  # TO MODIFY
+  - host: flyingtom.lab.sspcloud.fr  # TO MODIFY
     http:
       paths:
       - path: /
