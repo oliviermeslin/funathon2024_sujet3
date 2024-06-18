@@ -12,14 +12,7 @@ Dans la première partie de ce sujet, nous avons vu comment utiliser une API Pyt
 ::: {.callout-tip collapse="false" icon=false}
 ## `<i class="bi bi-book"></i>`{=html} Exercice 2: Prise en main de Dash
 
-Le script suivant permet de faire tourner une application Dash minimale à partir des données contenues dans [ce fichier `.csv`](https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv). Il est disponible au chemin `minimal_app/main.py` du dépôt du sujet. Pour exécuter l'application, lancer depuis la racine du projet dans un Terminal la commande
-```
-python minimal_app/main.py
-``` 
-
-L'application est disponible à une URL indiquée sur l'interface utilisateur du SSP Cloud. Voici comment accéder au lien: depuis la page `Mes Services`, cliquer sur le bouton `Ouvrir` du service VSCode, puis sur le lien indiqué dans le texte (voir la capture d'écran ci-dessous). Pour rappel, il faut que vous ayez lancé le service VSCode en changeant la configuration (ouverture du port custom 5000 dans l'onglet `Networking`).
-
-![Emplacement du lien pour accéder à l'application Dash](img/custom_port.jpg)
+Le script ci-dessous permet de faire tourner une application Dash minimale à partir des données contenues dans [ce fichier `.csv`](https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv). Il est disponible au chemin `minimal_app/main.py` du dépôt du sujet.
 
 ```{python}
 #| eval: false
@@ -51,6 +44,15 @@ def update_graph(value):
 if __name__ == '__main__':
     app.run(debug=True, port=5000, host='0.0.0.0')
 ```
+
+Pour exécuter l'application, lancer depuis la racine du projet dans un Terminal la commande
+```
+python minimal_app/main.py
+``` 
+
+L'application est disponible à une URL indiquée sur l'interface utilisateur du SSP Cloud. Voici comment accéder au lien: depuis la page `Mes Services`, cliquer sur le bouton `Ouvrir` du service VSCode, puis sur le lien indiqué dans le texte (voir la capture d'écran ci-dessous). Pour rappel, il faut que vous ayez lancé le service VSCode en changeant la configuration (ouverture du port custom 5000 dans l'onglet `Networking`).
+
+![Emplacement du lien pour accéder à l'application Dash](img/custom_port.jpg)
 
 Regardez les différents composants de l'application et identifiez les éléments du code correspondants, en lisant attentivement cette [page de la documentation de `Dash`](https://dash.plotly.com/basic-callbacks). En particulier, essayez de comprendre comment la fonction `update_graph()` est appelée.
 

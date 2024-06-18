@@ -34,7 +34,7 @@ website:
         href: 1-api.qmd
       - text: "2 Première version de l'UI"
         href: 2-dash.qmd
-      - text: "3 Améliorer de l'UI"
+      - text: "3 Améliorer l'UI"
         href: 3-advanced.qmd
       - text: "4 Améliorer encore l'UI"
         href: 4-final.qmd

@@ -106,19 +106,19 @@ print(f"Informations récupérées sur {len(flights)} vols.")
 
 7. Pour analyser les détails d'un vol, il faut utiliser les méthodes `FlightRadar24API.get_flight_details` pour collecter les détails d'un vol précis via l'API, puis `Flight.set_flight_details` pour les attribuer à ce vol (car seulement quelques informations sont collectées par défaut). Explorer les informations disponibles sur un vol (objet de la classe `Flight`), par exemple en listant les attribus avec la commande `dir(my_flight)`. On pourra notamment regarder les attributs suivants:
 
-- `latitude`: Latitude de l'aéronef;
-- `longitude`: Longitude de l'aéronef;
-- `id`: Identifiant du vol;
-- `icao_24bit`: Identifiant de l'aéronef;
-- `heading`: Cap de vol (en degrés);
-- `altitude`: Altitude (en pieds);
-- `ground_speed`: Vitesse au sol (en noeuds);
-- `aircraft_code`: Type d'aéronef;
-- `origin_airport_name`: Aéroport d'origine;
-- `destination_airport_name`: Aéroport de destination;
-- `airline_iata`: Code IATA de compagnie aérienne;
-- `vertical_speed`: Vitesse verticale (en pieds par minute);
-- `airline_icao`: Code ICAO de compagnie aérienne.
+  - `latitude`: Latitude de l'aéronef;
+  - `longitude`: Longitude de l'aéronef;
+  - `id`: Identifiant du vol;
+  - `icao_24bit`: Identifiant de l'aéronef;
+  - `heading`: Cap de vol (en degrés);
+  - `altitude`: Altitude (en pieds);
+  - `ground_speed`: Vitesse au sol (en noeuds);
+  - `aircraft_code`: Type d'aéronef;
+  - `origin_airport_name`: Aéroport d'origine;
+  - `destination_airport_name`: Aéroport de destination;
+  - `airline_iata`: Code IATA de compagnie aérienne;
+  - `vertical_speed`: Vitesse verticale (en pieds par minute);
+  - `airline_icao`: Code ICAO de compagnie aérienne.
 
 Essayez d'identifier les différentes informations associées à un vol.
 
